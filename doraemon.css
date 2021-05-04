@@ -1,0 +1,491 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100vh;
+	 box-sizing: border-box;/*The browser presents a box with a specified width and height, and puts the border and inner margin into the box. */
+	 justify-content: center;/*Horizontal centered*/
+	 align-items: center;/*center vertically*/
+	display: -webkit-flex;
+}
+.doraemon{
+	width: 600px;
+	height: 600px;
+	/*border: 10px solid green;*/
+}
+ 
+ /*Head*/
+.doraemon>.head{
+	margin: auto;
+	width: 320px;
+	height: 320px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: deepskyblue;
+}
+ 
+ /*Face*/
+.doraemon>.head>.face{
+	margin: auto;
+	width: 280px;
+	height: 270px;
+	border: 2px solid black;
+	border-radius: 50%;
+  background: white;
+  transform: translateY(47px);
+  z-index: -1;
+}
+ 
+ /*Eyes*/
+.doraemon>.head>.face>.eyes{
+	margin: auto;
+	 width: 150px;/*eye box size*/
+	height: 80px;
+	/*border: 2px solid black;*/
+	 display:flex;/*Line style display*/
+	transform: translateY(-32px);
+	
+}
+.doraemon>.head>.face>.eyes>.left_eye{
+	margin: auto;
+	 width: 60px;/*eye size*/
+	height: 80px;
+	border: 2px solid black;
+	border-radius:50%;
+	background:white;
+	 transform: translateX(7px);/*Move left eye to right*/
+}
+.doraemon>.head>.face>.eyes>.right_eye{
+	margin: auto;
+	width: 60px;
+	height: 80px;
+	border: 2px solid black;
+	border-radius:50%;
+	background:white;
+	 transform: translateX(-7px);/*Move the right eye to the left*/
+}
+ 
+ /*Eyeball*/
+.doraemon>.head>.face>.eyes>*:before{
+	margin:50% auto;
+	content: "";
+	display: block;
+	width: 10px;
+	height: 18px;
+	border:2px solid black;
+	border-radius: 50%;
+	background: black;
+}
+.doraemon>.head>.face>.eyes>.left_eye:before{
+	transform: translateX(10px);
+}
+.doraemon>.head>.face>.eyes>.right_eye:before{
+	transform: translateX(-10px);
+}
+ 
+ /*White eyes*/
+.doraemon>.head>.face>.eyes>*:after{
+	margin:-70% auto;
+	content: "";
+	display: block;
+	width: 3px;
+	height: 3px;
+	border:2px solid white;
+	border-radius: 50%;
+	background: white;
+}
+.doraemon>.head>.face>.eyes>.left_eye:after{
+	transform: translateX(10px);
+}
+.doraemon>.head>.face>.eyes>.right_eye:after{
+	transform: translateX(-10px);
+}
+ 
+ /*Nose*/
+.doraemon>.head>.face>.nose{
+	margin:auto;
+	width:35px;
+	height: 35px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background:crimson;
+	transform: translateY(-53px);
+}
+.doraemon>.head>.face>.nose:before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid white;
+	border-radius: 50%;
+	background: white;
+	transform: translate(3px ,4px);
+}
+.doraemon>.head>.face>.nose:after{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid brown;
+	border-radius: 50%;
+	background:brown;
+	transform: translate(9px ,0px);
+}
+ 
+ /*Mouth*/
+.doraemon>.head>.face>.mouth{
+	margin: auto;
+	width: 200px;
+	height: 110px;
+	/*border: 2px solid black;*/
+	overflow: hidden;
+}
+ 
+ /*Oral*/
+.doraemon>.head>.face>.mouth>.cavity{
+	margin: auto;
+	width: 200px;
+	height: 250px;
+	border: 2px solid black;
+	border-radius:50% ;
+	background:darkred;
+	transform: translate(-2px,-57%);
+	overflow: hidden;
+}
+ 
+ /*Tongue*/
+.doraemon>.head>.face>.mouth>.cavity>.left_tongue{
+	width: 100px;
+	height: 125px;
+	/*border: 2px solid black;*/
+	border-radius:50% 50% 0 0;
+	background: red;
+	transform:  translate(30px,170px) rotate(-45deg);
+}
+.doraemon>.head>.face>.mouth>.cavity>.right_tongue{
+	width: 100px;
+	height: 125px;
+	/*border: 2px solid black;*/
+	border-radius:50% 50% 0 0;
+	background: red;
+	transform:  translate(70px,45px)  rotate(45deg);
+}
+ /*Lips*/
+.doraemon>.head>.face>.left_lip{
+	margin: auto;
+	width: 102px;
+	height: 17px;
+	border: 2px solid black;
+    border-color:transparent transparent black black;
+	border-radius:50% ;
+	background: white;
+	float: left;
+	transform: translate(38px,-120px) rotate(-5deg);
+	
+	
+}
+.doraemon>.head>.face>.left_lip:before{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 70px;
+	border: 2px solid black;
+	border-color:black transparent transparent black;
+	border-radius:50% ;
+	background: white;
+	transform: translate(-29px,-62px) rotate(-32deg);
+  
+}
+.doraemon>.head>.face>.right_lip{
+	margin: auto;
+	width: 102px;
+	height: 17px;
+	border: 2px solid black;
+	border-color:transparent black black transparent;
+	border-radius:50% ;
+	background: white;
+	float: right;
+	transform: translate(-38px,-120px) rotate(5deg);
+	
+}
+.doraemon>.head>.face>.right_lip:before{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 70px;
+	border: 2px solid black;
+	border-color:black black transparent transparent;
+	border-radius:50% ;
+	background: white;
+	transform: translate(66px,-62px) rotate(32deg);
+}
+.doraemon>.head>.face>.right_lip:after{
+	content: "";
+	display: block;
+	width: 3px;
+	height: 57px;
+	background: black;
+	transform: translate(-2px,-118px) rotate(-5deg);
+}
+ /*Beard*/
+.doraemon>.head>.face>.left-beards{
+	width: 90px;
+  height: 3px;
+  background: black;
+  transform: translate(0px,-170px) rotate(4deg);
+  float: left;
+}
+.doraemon>.head>.face>.left-beards:before{
+	content: " ";
+	display: block;
+	width: 85px;
+  height: 3px;
+  background: black;
+  transform: translate(5px,-40px) rotate(20deg);
+}
+.doraemon>.head>.face>.left-beards:after{
+	content: " ";
+	display: block;
+	width: 90px;
+  height: 3px;
+  background: black;
+  transform: translate(5px,30px) rotate(-15deg);
+}
+.doraemon>.head>.face>.right-beards{
+	width: 90px;
+  height: 3px;
+  background: black;
+  transform: translate(0px,-170px) rotate(-4deg);
+  float: right;
+}
+.doraemon>.head>.face>.right-beards:before{
+	content: " ";
+	display: block;
+	width: 85px;
+  height: 3px;
+  background: black;
+  transform: translate(0px,-40px) rotate(-20deg);
+}
+.doraemon>.head>.face>.right-beards:after{
+	content: " ";
+	display: block;
+	width: 90px;
+  height: 3px;
+  background: black;
+  transform: translate(-5px,30px) rotate(15deg);
+}
+ 
+ /*Body*/
+.doraemon>.body{
+	margin: auto;
+	width: 220px;
+	height: 180px;
+	border: 2px solid black;
+	border-color: transparent black;
+	border-radius:10%;
+	background: deepskyblue;
+	transform: translate(0px,-16px);
+}
+ 
+ /*Bib*/
+.doraemon>.body>.twitter{
+	margin: auto;
+	width: 192px;
+	height: 16px;
+	border: 2px solid black;
+	border-radius:10% 10% 35% 35%;
+	background: red;
+	transform: translate(0px,-19px);
+}
+ 
+ /*Bell*/
+.doraemon>.body>.twitter>.bell{
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border-radius:50% ;
+	border: 2px solid black;
+	background:yellow;
+}
+.doraemon>.body>.twitter>.bell:before{
+	content: "";
+	display: block;
+	margin: auto;
+	width: 66px;
+	height: 50px;
+	border-radius:50% ;
+	border: 2px solid black;
+	border-color:black transparent transparent;
+	background: yellowellow;
+	transform: translate(-10px, 10px) ;
+ 
+}.doraemon>.body>.twitter>.bell:after{
+	content: "";
+	display: block;
+	margin: auto;
+	width: 66px;
+	height: 50px;
+	border-radius:50% ;
+	border: 2px solid black;
+	border-color:black transparent transparent;
+	background: yellowellow;
+	transform: translate(-10px, -50px) ;
+ 
+}
+.doraemon>.body>.twitter>.bell>.point{
+	margin: auto;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid black;
+	background: brown;
+  transform: translate(0px, -30px);
+}
+.doraemon>.body>.twitter>.bell>.point:after{
+	content: "";
+	display: block;
+	margin: auto;
+	width: 3px;
+	height: 15px;
+	background: black;
+	transform: translate(0px, 10px);
+}
+ /*Pocket*/
+.doraemon>.body>.pockets{
+	margin: -39px auto;
+	width: 180px;
+	height: 170px;
+	border: 2px solid black;
+	border-radius:50% 50% 45% 45%;
+	background: white;
+	z-index: -1;
+}
+.doraemon>.body>.pockets:before{
+	content: " ";
+	display: block;
+	margin: 25px auto;
+	width: 120px;
+	height: 120px;
+	border:2px solid black ;
+	border-radius: 50%;
+	border-color:transparent  transparent black black; 
+	transform: rotate(-45deg);
+}
+.doraemon>.body>.pockets:after{
+	content: " ";
+	display: block;
+	margin: -107px auto;
+	width: 120px;
+	height: 20px;
+	border-bottom:2px solid  black; 
+}
+ 
+ /*hand*/ 
+.doraemon>.body>.left_hand{
+	width: 140px;
+	height: 50px;
+	border: 2px solid black;
+ 	border-color: black  transparent  black transparent; 
+	border-radius:70% 40% 40% 70% ;
+	background: deepskyblue;
+	z-index: -1;
+	position: relative;
+	top: -102px;
+	left: -76px;
+	transform: rotate(-45deg);
+}
+.doraemon>.body>.left_hand:before{
+	content: " ";
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius:50% ;
+	background: white;
+	transform: translate(-30px,0px);
+}
+.doraemon>.body>.right_hand{
+	width: 140px;
+	height: 50px;
+	border: 2px solid black;
+ 	border-color: black  transparent  black transparent; 
+	border-radius:40% 70% 70% 40% ;
+	background: deepskyblue;
+	z-index: -1;
+	position: relative;
+	top: -215px;
+	left: 188px;
+	transform: rotate(-30deg);
+}
+.doraemon>.body>.right_hand:before{
+	content: " ";
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius:50% ;
+	background: white;
+	transform: translate(105px,0px);
+}
+ /*Foot*/
+.doraemon>.foot{
+	margin: -16px auto;
+	width:270px;
+	height: 50px;
+/*	border: 2px solid black;*/
+}
+.doraemon>.foot>*{
+	width: 120px;
+	height: 50px;
+	border: 2px solid black;
+	/*border-color: transparent black black black;*/
+	background: white;
+	z-index: -1;
+	/*transform: translate(0px,-40px);*/
+	position: relative;
+  top: -15px;
+}
+.doraemon>.foot>.left_foot{
+	border-radius:50% 50% 35% 50%;
+	transform: rotate(-2deg);
+	float: left;
+}
+.doraemon>.foot>.left_foot:before{
+	content: " ";
+	display: block;
+	width:100px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: deepskyblue;
+	transform: translate(19px,-3px);
+}
+.doraemon>.foot>.right_foot{
+	border-radius:50% 50% 50% 35%;
+	float: right;
+	transform: rotate(2deg);
+}
+.doraemon>.foot>.right_foot:before{
+	content: " ";
+	display: block;
+	width:100px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: deepskyblue;
+	transform: translate(-3px,-2px);
+}
+ /*pants*/
+.doraemon>.foot>.pants{
+	margin: auto;
+	width: 45px;
+	height: 15px;
+	border-radius:  50%;
+	border: 2px solid;
+	border-color:black   black  transparent black;
+	background: white;
+	z-index: 1;
+}
